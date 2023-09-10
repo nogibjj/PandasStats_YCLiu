@@ -27,6 +27,20 @@ def calMedian(df, clmn):
     except Exception as e:
         raise ValueError("ValueError. Check if input column is of datatype int or float.") from e
 
+def calSD(df, clmn):
+    ''' 
+    The function takes the following 2 inputs:
+    1. A pandas DataFrame 
+    2. A column name
+    and outputs the standard deviation of the column.    
+    '''    
+    if clmn not in df.columns:
+        raise ValueError("ValueError. Input column not in input DataFrame.")
+    try:
+        return df[clmn].std()
+    except Exception as e:
+        raise ValueError("ValueError. Check if input column is of datatype int or float.") from e
+
 def countItemOcc(df, clmn, item):
     ''' 
     The function takes the following 3 inputs:

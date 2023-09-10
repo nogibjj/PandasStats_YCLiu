@@ -18,8 +18,14 @@ The statsYC tool contains the following functions to generate stats from pandas 
   <br> and outputs the **median** of the column.
   <br> If the input **column** is **not in the DataFrame** or the datatype of the column is **not numerical**, the function **raise errors**.
 
+3. **calSD**: returns the **standard deviation** of a numeric column.
+  <br> The function takes the following 2 inputs:
+  <br> 1. A pandas DataFrame 
+  <br> 2. A column name
+  <br> and outputs the **standard deviation** of the column.
+  <br> If the input **column** is **not in the DataFrame** or the datatype of the column is **not numerical**, the function **raise errors**.
 
-3. **countItemOcc**: returns the **count of occurrences** of the input item in the input column.
+4. **countItemOcc**: returns the **count of occurrences** of the input item in the input column.
   <br> The function takes the following 3 inputs:
   <br> 1. A pandas DataFrame 
   <br> 2. A column name
@@ -27,7 +33,7 @@ The statsYC tool contains the following functions to generate stats from pandas 
   <br> and outputs the **number of occurrences of the item ** in the column.
   <br> If the input column is **not in the DataFrame**, the function **raise errors**.
 
-4. **calItemRate**: returns the **count of occurrences over count of all non-NA rows** of the input item in the input column.
+5. **calItemRate**: returns the **count of occurrences over count of all non-NA rows** of the input item in the input column.
   <br> The function takes the following 3 inputs:
   <br> 1. A pandas DataFrame 
   <br> 2. A column name
@@ -35,14 +41,14 @@ The statsYC tool contains the following functions to generate stats from pandas 
   <br> and outputs the **number of occurrences of the string over total number of non-None rows** in the column.
   <br> If the input column is **not in the DataFrame**, the function **raise errors**.
 
-5. **printNumStats**: a simple visualization tool to print the **mean and median** of a column in a clear format.
+6. **printNumStats**: a simple visualization tool to print the **mean and median** of a column in a clear format.
   <br> The function takes the following 2 inputs:
   <br> 1. A pandas DataFrame 
   <br> 2. A column name
   <br> and it **prints out the mean and median** of the numerical column in the following format:
   <br> The mean is *MeanRoundedTo2Digits*. The median is *MedianRoundedTo2Digits*.          
 
-6. **printOccStats**: a simple visualization tool to **print the count and rate of occurrence of an item** of a column in a clear format.
+7. **printOccStats**: a simple visualization tool to **print the count and rate of occurrence of an item** of a column in a clear format.
   <br> The function takes the following 3 inputs:
   <br> 1. A pandas DataFrame 
   <br> 2. A column name
