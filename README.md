@@ -1,22 +1,52 @@
 [![Python application test with Github Actions](https://github.com/nogibjj/DETemplatePy/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/DETemplatePy/actions/workflows/main.yml)
 
-## Python template for Data Engineering
+## A simple library that generates descriptive stats on pandas DataFrame.
 
-This is a python template repository doing the following:
+The statsYC tool contains the following functions to generate stats from pandas DataFrame:
 
-1. **Set up enviroment for development**:
-  <br>a. .devcontainer: contains devcontainer (used CodeSpace python default), setting up the environment for development.
-  <br>b. .gitignore: specifies information to ignore (used GitHub default).
-  <br>c. requirements.txt: lists required packages for the project.
+1. **calMean**: returns the **mean** of a numeric column.
+  <br> The function takes the following 2 inputs:
+  <br> 1. A pandas DataFrame 
+  <br> 2. A column name
+  <br> and outputs the **mean** of the column.
+  <br> If the input **column** is **not in the DataFrame** or the datatype of the column is **not numerical**, the function **raise errors**.
 
-2. **Specify GitHub Actions and Timing**
-  <br>d. Makefile: when pushed/ pulled to main branch, install packages, then lint, test, format python files in the branch.
+2. **calMedian**: returns the **median** of a numeric column.
+  <br> The function takes the following 2 inputs:
+  <br> 1. A pandas DataFrame 
+  <br> 2. A column name
+  <br> and outputs the **median** of the column.
+  <br> If the input **column** is **not in the DataFrame** or the datatype of the column is **not numerical**, the function **raise errors**.
 
-3. **Provide example python function and test functions**
-   <br>e. main.py: main function.
-   <br>f. test_main.py: test functions for main function.
 
-4. **Provide an overview of the template**
-   <br>g. README.md: THIS FILE, explaining the purpose of the directory.
+3. **countItemOcc**: returns the **count of occurrences** of the input item in the input column.
+  <br> The function takes the following 3 inputs:
+  <br> 1. A pandas DataFrame 
+  <br> 2. A column name
+  <br> 3. An item (e.g. a string or a number)
+  <br> and outputs the **number of occurrences of the item ** in the column.
+  <br> If the input column is **not in the DataFrame**, the function **raise errors**.
 
-The template can be applied to automate quality control for any future projects.
+4. **calItemRate**: returns the **count of occurrences over count of all non-NA rows** of the input item in the input column.
+  <br> The function takes the following 3 inputs:
+  <br> 1. A pandas DataFrame 
+  <br> 2. A column name
+  <br> 3. An item (e.g. a string or a number)
+  <br> and outputs the **number of occurrences of the string over total number of non-None rows** in the column.
+  <br> If the input column is **not in the DataFrame**, the function **raise errors**.
+
+5. **printNumStats**: a simple visualization tool to print the **mean and median** of a column in a clear format.
+  <br> The function takes the following 2 inputs:
+  <br> 1. A pandas DataFrame 
+  <br> 2. A column name
+  <br> and it **prints out the mean and median** of the numerical column in the following format:
+  <br> The mean is *MeanRoundedTo2Digits*. The median is *MedianRoundedTo2Digits*.          
+
+6. **printOccStats**: a simple visualization tool to **print the count and rate of occurrence of an item** of a column in a clear format.
+  <br> The function takes the following 3 inputs:
+  <br> 1. A pandas DataFrame 
+  <br> 2. A column name
+  <br> 3. An item (e.g. a string or a number)
+  <br> and it **print the count and rate of occurrences of an item** of the input item in the input column in the following format:
+  <br> The number of occurrences is *CountItemOccurrence*, or *RateOfItemOccurrenceRoundedTo2Digits* of total samples.          
+<br><br>The function were **linted**, **tested**, and **formatted** when pushed to the repository and passed all the steps.
