@@ -49,4 +49,4 @@ The statsYC tool contains the following functions to generate stats from pandas 
   <br> 3. An item (e.g. a string or a number)
   <br> and it **print the count and rate of occurrences of an item** of the input item in the input column in the following format:
   <br> The number of occurrences is *CountItemOccurrence*, or *RateOfItemOccurrenceRoundedTo2Digits* of total samples.          
-<br><br>The function were **linted**, **tested**, and **formatted** when pushed to the repository and passed all the steps.
+<br><br>All functions were **linted**, **tested**, and **formatted** when pushed to the repository and passed all the steps.
