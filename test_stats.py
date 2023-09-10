@@ -13,11 +13,14 @@ import statsYC
 #Functionality Test
 def testStats():
     TestCase1 = pd.read_csv('TestCase1.csv', header = 0)
-
     assert statsYC.calMean(TestCase1, 'Age') == 12.5
     assert statsYC.calMedian(TestCase1, 'Age') == 13
     assert statsYC.countItemOcc(TestCase1, 'Sex', 'M') == 4
-    assert statsYC.calItemRate(TestCase1, 'Sex', 'M') == 4/6
-    statsYC.printNumClmnStats(TestCase1, 'Age')
-    statsYC.printCatClmnStats(TestCase1, 'Sex', 'M')
+    assert statsYC.calItemRate(TestCase1, 'Sex', 'M') == (4*100)/6
+    statsYC.printNumStats(TestCase1, 'Age')
+    statsYC.printOccStats(TestCase1, 'Sex', 'M')
+    pass
+
+if __name__ == '__main__':
+    testStats()
     pass
