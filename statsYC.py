@@ -1,13 +1,10 @@
-import pandas as pd
-
-
 def calMean(df, clmn):
     if clmn not in df.columns:
         raise ValueError("ValueError. Input column not in input DataFrame.")
     try:
         return df[clmn].mean()
-    except:
-        raise ValueError("ValueError. Check if input column is of datatype int or float.")
+    except Exception as e:
+        raise ValueError("ValueError. Check if input column is of datatype int or float.") from e
     
 
 def calMedian(df, clmn):
@@ -15,8 +12,8 @@ def calMedian(df, clmn):
         raise ValueError("ValueError. Input column not in input DataFrame.")
     try:
         return df[clmn].median()
-    except:
-        raise ValueError("ValueError. Check if input column is of datatype int or float.")
+    except Exception as e:
+        raise ValueError("ValueError. Check if input column is of datatype int or float.") from e
 
 def countItemOcc(df, clmn, example):
     if clmn not in df.columns:
