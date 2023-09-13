@@ -71,12 +71,14 @@ def printNumStats(df, clmn):
     1. A pandas DataFrame 
     2. A column name
     and it prints out the mean and median of the numerical column in the following format:
-    "The mean is *MeanRoundedTo2Digits*. The median is *MedianRoundedTo2Digits*."
+    "In InputColumn column, the mean is *MeanRoundedTo2Digits* and the median is *MedianRoundedTo2Digits*."
     '''    
     clmnMean = round(calMean(df, clmn), 2)
     clmnMedian = round(calMedian(df, clmn), 2)
-    print('The mean is {}. The median is {}.'.format(str(clmnMean),str(clmnMedian)))
-    return None
+    Clmn_s = "In {} column, ".format(clmn)
+    Summary_s = 'the mean is {} and the median is {}.'.format(str(clmnMean),str(clmnMedian))
+    return Clmn_s + Summary_s 
+    
           
 def printOccStats(df, clmn, item):
     '''
@@ -84,10 +86,11 @@ def printOccStats(df, clmn, item):
     1. A pandas DataFrame 
     2. A column name
     3. An item (e.g. a string or a number)
-    and it prints out the following:
-    "The number of occurrences is CountItemOccurrence, or RateOfItemOccurrenceRoundedTo2Digits of total samples."          
+    and it returns the following:
+    "In InputColumn column, the number of occurrences of Item is CountItemOccurrence, or RateOfItemOccurrenceRoundedTo2Digits of total samples."          
     '''
     ItemOcc = countItemOcc(df, clmn, item)
     ItemOccPercent = calItemRate(df, clmn, item)
-    print('The number of occurrences is {}, or {}% of total samples.'.format(ItemOcc,str(round(ItemOccPercent, 2))))
-    return None
+    Clmn_s = "In {} column, ".format(clmn)
+    Summary_s = 'the number of occurrences of {} is {}, or {}% of total samples.'.format(item, ItemOcc,str(round(ItemOccPercent, 2)))
+    return Clmn_s + Summary_s

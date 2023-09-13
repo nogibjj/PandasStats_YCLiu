@@ -46,13 +46,16 @@ The statsYC tool contains the following functions to generate stats from pandas 
   <br> 1. A pandas DataFrame 
   <br> 2. A column name
   <br> and it **prints out the mean and median** of the numerical column in the following format:
-  <br> The mean is *MeanRoundedTo2Digits*. The median is *MedianRoundedTo2Digits*.          
+  <br> In *Input* column, the mean is *MeanRoundedTo2Digits* and the median is *MedianRoundedTo2Digits*.          
 
 7. **printOccStats**: a simple visualization tool to **print the count and rate of occurrence of an item** of a column in a clear format.
   <br> The function takes the following 3 inputs:
   <br> 1. A pandas DataFrame 
   <br> 2. A column name
   <br> 3. An item (e.g. a string or a number)
-  <br> and it **print the count and rate of occurrences of an item** of the input item in the input column in the following format:
-  <br> The number of occurrences is *CountItemOccurrence*, or *RateOfItemOccurrenceRoundedTo2Digits* of total samples.          
+  <br> and it **returns the count and rate of occurrences of an item** of the input item in the input column in the following format:
+  <br> In *Input* column, the number of occurrences is *CountItemOccurrence*, or *RateOfItemOccurrenceRoundedTo2Digits* of total samples.        
+
+The **outputStats** script applies the **statsYC tool** to generate example summaries to a PDF file.
+
 <br><br>All functions were **linted**, **tested**, and **formatted** when pushed to the repository and passed all the steps.
