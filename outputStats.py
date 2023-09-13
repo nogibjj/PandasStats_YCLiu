@@ -2,17 +2,16 @@ from fpdf import FPDF
 import pandas as pd
 import statsYC
 
-SummaryReport = FPDF()
- 
-# Add a page
-SummaryReport.add_page()
- 
-# set style and font size
-SummaryReport.set_font("Arial", size = 12)
+def makeSummary():
+    SummaryReport = FPDF()
+    
+    # Add a page
+    SummaryReport.add_page()
 
-TestCase1 = pd.read_csv('TestCase1.csv', header = 0)
-SummaryReport.cell(200, 12, txt = statsYC.printNumStats(TestCase1, 'Age'),ln = 1, align = 'L')
-SummaryReport.cell(200, 12, txt = statsYC.printOccStats(TestCase1, 'Sex', 'M'),ln = 2, align = 'L')
- 
+    # set style and font size
+    SummaryReport.set_font("Arial", size = 12)
 
-SummaryReport.output("SummaryReport.pdf")  
+    TestCase1 = pd.read_csv('TestCase1.csv', header = 0)
+    SummaryReport.cell(200, 12, txt = statsYC.printNumStats(TestCase1, 'Age'),ln = 1, align = 'L')
+    SummaryReport.cell(200, 12, txt = statsYC.printOccStats(TestCase1, 'Sex', 'M'),ln = 2, align = 'L')
+    SummaryReport.output("SummaryReport.pdf")  

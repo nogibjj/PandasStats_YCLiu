@@ -1,5 +1,7 @@
+import os
 import pandas as pd
 import statsYC
+import outputStats
 
 # case1
 # case1_l = [['Angel', 'F', 10], ['Nick', 'M', 15], ['John','M', 13],
@@ -25,5 +27,7 @@ def testStats():
 
 if __name__ == '__main__':
     testStats()
+    outputStats.makeSummary()
+    assert os.path.isfile("SummaryReport.pdf")
     pass
 
