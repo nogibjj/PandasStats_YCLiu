@@ -56,6 +56,6 @@ The statsYC tool contains the following functions to generate stats from pandas 
   <br> and it **returns the count and rate of occurrences of an item** of the input item in the input column in the following format:
   <br> In *Input* column, the number of occurrences is *CountItemOccurrence*, or *RateOfItemOccurrenceRoundedTo2Digits* of total samples.        
 
-The **outputStats** script applies the **statsYC tool** to generate example summaries to a PDF file.
+The **outputStats** script applies the **statsYC tool** to generate example summaries to a PDF file (which is **SummaryReport.pdf** in this repository).
 
 <br><br>All functions were **linted**, **tested**, and **formatted** when pushed to the repository and passed all the steps.
