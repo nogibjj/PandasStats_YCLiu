@@ -14,3 +14,6 @@ uvicorn
 matplotlib
 numpy
 pandas
+
+#summary report
+fpdf
