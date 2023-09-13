@@ -25,9 +25,13 @@ def testStats():
     print(statsYC.printOccStats(TestCase1, 'Sex', 'M'))
     pass
 
-if __name__ == '__main__':
-    testStats()
+def testOutput():
     outputStats.makeSummary()
     assert os.path.isfile("SummaryReport.pdf")
+    pass
+
+if __name__ == '__main__':
+    testStats()
+    testOutput()
     pass
 
