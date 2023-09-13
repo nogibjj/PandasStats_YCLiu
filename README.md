@@ -45,7 +45,7 @@ The statsYC tool contains the following functions to generate stats from pandas 
   <br> The function takes the following 2 inputs:
   <br> 1. A pandas DataFrame 
   <br> 2. A column name
-  <br> and it **prints out the mean and median** of the numerical column in the following format:
+  <br> and it **returns out the mean and median** of the numerical column in the following format:
   <br> In *Input* column, the mean is *MeanRoundedTo2Digits* and the median is *MedianRoundedTo2Digits*.          
 
 7. **printOccStats**: a simple visualization tool to **print the count and rate of occurrence of an item** of a column in a clear format.
