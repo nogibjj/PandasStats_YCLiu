@@ -30,7 +30,7 @@ The statsYC tool contains the following functions to generate stats from pandas 
   <br> 1. A pandas DataFrame 
   <br> 2. A column name
   <br> 3. An item (e.g. a string or a number)
-  <br> and outputs the **number of occurrences of the item ** in the column.
+  <br> and outputs the **number of occurrences of the item** in the column.
   <br> If the input column is **not in the DataFrame**, the function **raise errors**.
 
 5. **calItemRate**: returns the **count of occurrences over count of all non-NA rows** of the input item in the input column.
