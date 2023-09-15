@@ -1,6 +1,6 @@
 [![Python application test with Github Actions](https://github.com/nogibjj/DETemplatePy/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/DETemplatePy/actions/workflows/main.yml)
 
-## A simple library that generates descriptive stats on pandas DataFrame.
+## A simple library that generates descriptive stats on Using Polars.
 
 The statsYC tool contains the following functions to generate stats from pandas DataFrame:
 
